@@ -6,10 +6,6 @@ import java.lang.reflect.Method;
 
 public class DataProviders {
 
-    @DataProvider(name = "Authentication")
-    public static Object[][] credentials() {
-        return new Object[][] {{"TSPEARS", "password1"}};
-    }
 
     @DataProvider(name = "Roster Search")
     public static Object[][] rosterSearch(Method method) {

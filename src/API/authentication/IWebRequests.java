@@ -19,7 +19,7 @@ public class IWebRequests {
     @BeforeClass
     public void requestSpec() {
         build  = new RequestSpecBuilder();
-        build.setBaseUri("http://bladeiwebwv.stchome.com:8080/SchoolNurse");
+        build.setBaseUri("IWEB URLS");
         build.setBasePath("/verify/iweb");
 
         rspec = build.build();
@@ -39,7 +39,7 @@ public class IWebRequests {
         given()
                 .auth().preemptive().oauth2(iwa.accessIWebToken)
                 .when()
-                .get("http://bladeiwebwv.stchome.com:8080/SchoolNurse/verify/iweb")
+                .get("")
                 .then()
                 .log()
                 .body();

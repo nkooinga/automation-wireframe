@@ -43,19 +43,7 @@ public class LoginPO {
 
     public void signInBtn() {
         getLoginBtn().click();
-//        if(loginBtn.isDisplayed()||loginBtn.isEnabled())
-//            loginBtn.click();
-//        else System.out.println("Element not displayed/enabled");
-    }
 
-
-//    public void enterUsername(String user) {
-//        getUsername().sendKeys(user);
-//    }
-//
-//    public void enterPassword(String pw) {
-//        getPassword().sendKeys(pw);
-//    }
 
     public String getURL() {
         String getURL= driver.getCurrentUrl();
@@ -77,15 +65,5 @@ public class LoginPO {
         Thread.sleep(5000);
         getURL();
     }
-//
-////  Adding Screenshot capabilities
-//        Thread.sleep(1000);
-//        File loginSS = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//        FileUtils.copyFile(loginSS, new File("testImages/loginSS"));
-////  Use this for screenshots on logs
-////        ExtentUtil.fetchTest().info("Succesful Login", MediaEntityBuilder.createScreenCaptureFromPath("testImages/loginSS").build());
-////  Use this for screenshots on tests
-//        ExtentUtil.fetchTest().addScreenCaptureFromPath("testImages/loginSS");
-//        return driver.getCurrentUrl().contains("aws");
-//    }
+
 }

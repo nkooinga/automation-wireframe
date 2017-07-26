@@ -16,70 +16,10 @@ import java.util.Properties;
 
 public class BaseSetup {
 
-//    public WebDriver driver;
-//    static String chromedriverPath = "C://Modernization//automation-wireframe//";
-//    static String geckodriverPath = "geckodriver.exe";
-//
-//    public WebDriver getDriver() {
-//        return driver;
-//    }
-//
-//    public void setDriver(String browserType, String appURL) {
-//        switch (browserType) {
-//            case "chrome":
-//                driver = initChromeDriver(appURL);
-//                break;
-//            case "firefox":
-//                driver = initFirefoxDriver(appURL);
-//                break;
-//            default:
-//                System.out.println("browser : " + browserType
-//                        + " is invalid. Launching Firefox as default.");
-//                ExtentUtil.fetchTest().log(Status.INFO, "browser: " + browserType + " is invalid. Launching Firefox as default.");
-//                driver = initFirefoxDriver(appURL);
-//        }
-//    }
-//
-//    public WebDriver initChromeDriver(String appURL) {
-//        System.out.println("Launching google chrome with new profile..");
-//        System.setProperty("webdriver.chrome.driver", chromedriverPath);
-//        System.out.println("Properties Set");
-//        WebDriver driver = new ChromeDriver();
-//        System.out.println("Driver Initialized");
-//        driver.manage().window().maximize();
-//        driver.navigate().to(appURL);
-//        return driver;
-//    }
-//
-//    private WebDriver initFirefoxDriver(String appURL) {
-//        System.out.println("Launching Firefox browser..");
-//        System.setProperty("webdriver.firefox.driver", geckodriverPath
-//                + "geckodriver.exe");
-//        WebDriver driver = new FirefoxDriver();
-//        driver.manage().window().maximize();
-//        driver.navigate().to(appURL);
-//        return driver;
-//    }
-//
-//    @Parameters({ "browserType", "appURL" })
-//    @BeforeClass
-//    public void initializeBaseSetup(String browserType, String appURL) {
-//        try {
-//            setDriver(browserType, appURL);
-//
-//        } catch (Exception e) {
-//            System.out.println("Error....." + e.getStackTrace());
-//        }
-//    }
-//
-//    @AfterClass
-//    public void tearDown() {
-//        driver.quit();
-//    }
 
     public WebDriver driver;
-    private static String chromedriverPath = "C://Modernization//automation-wireframe//chromedriver.exe";
-    private static String geckodriverPath = "C://Modernization//automation-wireframe//geckodriver.exe";
+    private static String chromedriverPath = "chromedriver.exe";
+    private static String geckodriverPath = "geckodriver.exe";
 
 
     public WebDriver initializeDriver() throws IOException {
@@ -109,7 +49,7 @@ public class BaseSetup {
     public void takeScreenshot() throws IOException {
 
         Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream("C:/Modernization/TestScreenshots");
+        FileInputStream fis = new FileInputStream("TestScreenshots");
 
         prop.load(fis);
         String ssloc = prop.getProperty("SCREENSHOT");

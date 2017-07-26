@@ -164,22 +164,6 @@ public class DemographicsPO {
         return notesText;
     }
 
-    @FindBy(xpath = "//span[.='Edit']")
-    private WebElement editBtn;
-
-    public WebElement getEditBtn() {
-        return editBtn;
-    }
-
-    @FindBy(xpath = "//span[.='Save']")
-    private WebElement saveBtn;
-
-    public WebElement getSaveBtn() {
-        return saveBtn;
-    }
-
-    @FindBy(xpath = "//span[.='Cancel']")
-    private WebElement cancelBtn;
 
     public WebElement getCancelBtn() {
         return cancelBtn;
